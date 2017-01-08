@@ -7,7 +7,7 @@
     "build": "webpack -d --watch",
     "build-prod": "webpack -p"
   },
-  "author": "",
+  "author": "anshul sharma",
   "license": "ISC",
   "dependencies": {
     "react": "^15.4.2",

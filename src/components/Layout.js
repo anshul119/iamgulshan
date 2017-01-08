@@ -4,9 +4,9 @@ import Header from './header';
 export default class Layout extends React.Component {
 	render() {
 		return (
-			<div className="app-container">
+			<div className="container">
 				<Header />
-				<div className="app-content">{this.props.children}</div>
+				<div className="content">{this.props.children}</div>
 				<footer>
 				</footer>
 			</div>

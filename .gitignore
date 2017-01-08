@@ -1,5 +1,8 @@
 # Dependency directories
 node_modules
 
+#prod
+hot/
+
 # IDE
 .idea/

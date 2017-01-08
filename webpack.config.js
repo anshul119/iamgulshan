@@ -14,7 +14,10 @@ var config = {
 	],
 	output: {
 		path: BUILD_DIR,
-		filename: path.join('/js', 'bundle.js')
+		filename: path.join('/js', 'bundle.js'),
+		publicPath: '/',
+		hotUpdateChunkFilename: 'hot/hot-update.js',
+		hotUpdateMainFilename: 'hot/hot-update.json'
 	},
 	resolve: {
 		modulesDirectories : ['node_modules', APP_DIR],

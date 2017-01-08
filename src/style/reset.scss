@@ -1,3 +1,6 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400');
+
 /* basic reset */
 
 html, body, div, span, applet, object, iframe,
@@ -16,9 +19,12 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	font-family: 'Roboto Slab', serif;;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
+}
+a {
+	text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
