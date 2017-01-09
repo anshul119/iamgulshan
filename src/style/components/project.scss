@@ -1,0 +1,37 @@
+.project-head{
+	padding: 60px 0;
+	text-align: center;
+
+	.heading {
+		font-size: 60px;
+		font-weight: 300;
+		padding-bottom: 20px;
+		color: $project-heading;
+	}
+
+	.description {
+		font-size: 20px;
+		font-weight: 100;
+		line-height: 1.4;
+		color: $project-description;
+	}
+}
+
+.project-image {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.navigate-back {
+	text-align: center;
+
+	a{
+		color: rgba($navigate-back-link-color, 0.5);
+		transition: .5s;
+
+		&:hover {
+			color: rgba($navigate-back-link-color, .8);
+		}
+	}
+}

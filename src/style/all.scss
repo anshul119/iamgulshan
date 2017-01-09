@@ -1,8 +1,10 @@
 @import "reset";
 
-@import "colors";
+@import "config/breakpoints";
+@import "config/colors";
 @import "main";
 
 @import "components/header";
 @import "grid";
-@import "components/portfolio_card";
+@import "components/project_card";
+@import "components/project";

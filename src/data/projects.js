@@ -1,8 +1,8 @@
-const portfolio = [
+const projects = [
 	{
 		'id': 'chimp-tee',
 		'name': 'Chimp Tee',
-		'subtitle': 'Tee designed for mainchimp',
+		'caption': 'Tee designed for mainchimp',
 		'thumbnail': 'https://mir-s3-cdn-cf.behance.net/project_modules/source/76c7c330806997.56336f3012213.png',
 		'description': 'I was asked by mailchip a couple of years ago to make tee for their company. I believe the design was not used but nonetheless it was an extremely fun design to make and an exelent client. Very happy for the opportunity.',
 		'images': [
@@ -23,7 +23,7 @@ const portfolio = [
 	{
 		'id': 'chill-pill',
 		'name': 'Chill Pill',
-		'subtitle': 'Fun tee design which got purchased by clothing company.',
+		'caption': 'Fun tee design which got purchased by clothing company.',
 		'thumbnail': 'https://mir-s3-cdn-cf.behance.net/project_modules/source/e59f8630807127.5633705ebc788.png',
 		'description': 'Fun tee design which got purchased by clothing company.',
 		'images': [
@@ -39,4 +39,4 @@ const portfolio = [
 	}
 ];
 
-export default portfolio;
+export default projects;
