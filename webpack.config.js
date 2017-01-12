@@ -2,22 +2,16 @@ var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var BUILD_DIR = path.resolve(__dirname, 'public');
+var BUILD_DIR = path.resolve(__dirname, 'src', 'public');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
 	devtool: 'inline-source-map',
-	entry: [
-		'webpack-dev-server/client?http://127.0.0.1:8080/',
-		'webpack/hot/only-dev-server',
-		APP_DIR
-	],
+	entry: path.join(APP_DIR, 'index.js'),
 	output: {
 		path: BUILD_DIR,
 		filename: path.join('/js', 'bundle.js'),
 		publicPath: '/',
-		hotUpdateChunkFilename: 'hot/hot-update.js',
-		hotUpdateMainFilename: 'hot/hot-update.json'
 	},
 	resolve: {
 		modulesDirectories : ['node_modules', APP_DIR],
@@ -28,7 +22,7 @@ var config = {
 			{
 				test : /\.jsx?/,
 				exclude: /node_modules/,
-				loaders : ['react-hot', 'babel']
+				loader : 'babel'
 			},
 			{
 				test: /\.scss$/,
@@ -37,8 +31,19 @@ var config = {
 		]
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin(),
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+		}),
 		new webpack.NoErrorsPlugin(),
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.optimize.UglifyJsPlugin({
+			compress: { warnings: false },
+			mangle: true,
+			sourcemap: false,
+			beautify: false,
+			dead_code: true
+		}),
 		new ExtractTextPlugin(path.join('/style' , '/main.css'), {
 			allChunks: true
 		})

@@ -2,7 +2,8 @@
 node_modules
 
 #prod
-hot/
+js/
+style/
 
 # IDE
 .idea/
