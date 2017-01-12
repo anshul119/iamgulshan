@@ -2,8 +2,8 @@
 node_modules
 
 #prod
-js/
-style/
+/src/public/js
+/src/public/style
 
 # IDE
 .idea/
