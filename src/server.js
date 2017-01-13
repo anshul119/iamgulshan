@@ -14,7 +14,7 @@ app.use(Express.static(path.join(__dirname, 'public')));
 
 app.get('*', (req, res) => {
 	match(
-		{router, location: req.url},
+		{routes: router, location: req.url},
 		(err, redirectLocation, renderProps) => {
 			if(err) {
 				return res.status(500).send(err.message);
@@ -26,7 +26,6 @@ app.get('*', (req, res) => {
 
 			let markup;
 			if(renderProps) {
-				console.log('yes');
 				markup = renderToString(<RouterContext {...renderProps}/>);
 			}
 			else {
@@ -39,7 +38,7 @@ app.get('*', (req, res) => {
 	);
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 const env = process.env.NODE_ENV || 'production';
 
 app.listen(port, err => {
