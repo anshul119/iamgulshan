@@ -17,7 +17,9 @@ export default class Project extends React.Component {
 					<h1 className="heading">{project.name}</h1>
 					<p className="description">{project.description}</p>
 				</div>
-				{project_images.map((image, i) => <img key={i} src={image.src} alt={image.alt} className="project-image" />)}
+				<div className="project-img-wrapper">
+					{project_images.map((image, i) => <img key={i} src={image.src} alt={image.alt} className="project-img" />)}
+				</div>
 				<div className="navigate-back">
 					<Link to="/">Back to the index</Link>
 				</div>

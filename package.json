@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -d --watch",
     "build-prod": "NODE_ENV=production node_modules/.bin/webpack -p",
-    "start": "NODE_ENV=production node_modules/.bin/babel-node src/server.js"
+    "start": "NODE_ENV=production node_modules/.bin/babel-node src/server.es6"
   },
   "author": "anshul sharma",
   "license": "ISC",
