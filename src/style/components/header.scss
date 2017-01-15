@@ -9,6 +9,10 @@
 .logo {
 	text-align: center;
 	font-size: 24px;
+
+	img {
+		width: 50px;
+	}
 }
 
 
@@ -23,13 +27,42 @@
 
 		li {
 			flex: 1;
-			font-family: llxb;
 			font-size: 40px;
 			font-weight: 300;
 			line-height: 40px;
 
+			@media (max-width: $tablet) {
+				font-size: 32px;
+			}
+
+			@media (max-width: $mobile) {
+				font-size: 24px;
+			}
+
 			a {
 				color: $menu-item-color;
+			}
+		}
+	}
+}
+
+.social {
+	display: block;
+
+	ul {
+		text-align: center;
+
+		li {
+			display: inline-block;
+			padding: 30px 25px;
+
+			a {
+				color: $social-icon-color;
+				transition: 0.5s;
+
+				&:hover {
+					color: $social-icon-hover;
+				}
 			}
 		}
 	}

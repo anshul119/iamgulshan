@@ -1,37 +1,42 @@
 .project-head{
-	padding: 60px 0;
-	text-align: center;
-
-	.heading {
-		font-size: 60px;
-		font-weight: 300;
-		padding-bottom: 20px;
-		color: $project-heading;
-	}
+	padding: 0 0 60px 0;
 
 	.description {
 		font-size: 20px;
 		font-weight: 100;
 		line-height: 1.4;
+		text-align: center;
 		color: $project-description;
 	}
 }
 
-.project-image {
-	display: block;
-	max-width: 100%;
+.project-img-wrapper {
+	max-width: 800px;
 	margin: 0 auto;
+
+	.project-img {
+		display: block;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 10px 0;
+	}
 }
 
 .navigate-back {
+	margin: 20px 0;
 	text-align: center;
 
 	a{
+		font-size: 24px;
 		color: rgba($navigate-back-link-color, 0.5);
 		transition: .5s;
 
 		&:hover {
 			color: rgba($navigate-back-link-color, .8);
+		}
+
+		@media (max-width: $mobile) {
+			font-size: 16px;
 		}
 	}
 }
